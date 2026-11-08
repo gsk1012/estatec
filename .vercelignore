@@ -1,0 +1,7 @@
+raw/
+.impeccable/review/
+.impeccable/questions/
+.next/
+.next-build/
+node_modules/
+.env.local
