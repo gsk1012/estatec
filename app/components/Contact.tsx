@@ -61,7 +61,7 @@ export default function Contact() {
 
   const label = "plan-letter mb-1.5 block text-[11px] text-inkt-600";
   const veld =
-    "h-11 w-full border border-inkt/60 bg-calque-50 px-3.5 text-[16px] text-inkt placeholder:text-inkt-500 transition-colors hover:border-inkt focus:border-blauw focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blauw";
+    "h-11 w-full border border-inkt/60 lg:h-12 bg-calque-50 px-3.5 text-[16px] text-inkt placeholder:text-inkt-500 transition-colors hover:border-inkt focus:border-blauw focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blauw";
 
   return (
     <section id="contact" aria-labelledby="contact-titel" className="border-t border-lijn bg-calque-200/70 text-inkt">
@@ -116,7 +116,7 @@ export default function Contact() {
         <form
           noValidate={false}
           onSubmit={verstuur}
-          className="self-start border-[3px] border-inkt bg-calque-50 p-5 sm:p-7 lg:sticky lg:top-[calc(var(--header-h)+24px)] lg:col-span-7 lg:col-start-6"
+          className="border-[3px] border-inkt bg-calque-50 p-5 sm:p-7 lg:col-span-7 lg:col-start-6 lg:flex lg:flex-col lg:p-9"
           aria-describedby="contact-privacy"
         >
           <fieldset>
@@ -125,7 +125,7 @@ export default function Contact() {
               {ONDERWERPEN.map((o) => (
                 <label
                   key={o.id}
-                  className={`relative flex min-h-[42px] cursor-pointer items-center justify-center px-3 text-center text-[14px] transition-colors has-[:focus-visible]:z-10 has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-[-2px] has-[:focus-visible]:outline-blauw ${
+                  className={`relative flex min-h-[42px] cursor-pointer items-center justify-center px-3 text-center text-[14px] lg:min-h-[50px] lg:text-[15px] transition-colors has-[:focus-visible]:z-10 has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-[-2px] has-[:focus-visible]:outline-blauw ${
                     onderwerp === o.id ? "bg-blauw text-calque-50" : "bg-calque-50 text-inkt hover:bg-calque-200"
                   }`}
                 >
@@ -143,7 +143,7 @@ export default function Contact() {
             </div>
           </fieldset>
 
-          <div className="mt-5 grid gap-x-3 gap-y-4 sm:grid-cols-2">
+          <div className="mt-5 grid gap-x-3 gap-y-4 sm:grid-cols-2 lg:mt-7 lg:flex-1 lg:grid-rows-[auto_auto_1fr] lg:gap-x-4 lg:gap-y-5">
             {metAdres ? (
               <div className="grid grid-cols-[minmax(0,1fr)_5.5rem] gap-3">
                 <label>
@@ -168,12 +168,12 @@ export default function Contact() {
               <span className={label}>Telefoon</span>
               <input name="telefoon" type="tel" autoComplete="tel" className={veld} />
             </label>
-            <label className="sm:col-span-2">
+            <label className="sm:col-span-2 lg:flex lg:flex-col">
               <span className={label}>Toelichting (optioneel)</span>
               <textarea
                 name="bericht"
                 rows={2}
-                className={`${veld} h-auto min-h-[72px] resize-y py-2.5 leading-relaxed`}
+                className={`${veld} h-auto min-h-[72px] resize-y py-2.5 leading-relaxed lg:h-auto lg:min-h-[120px] lg:flex-1`}
               />
             </label>
             {/* Honeypot */}
@@ -183,7 +183,7 @@ export default function Contact() {
             </label>
           </div>
 
-          <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-3">
+          <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-3 lg:mt-7">
             <button
               type="submit"
               disabled={status === "bezig"}
