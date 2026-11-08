@@ -213,14 +213,8 @@ p {
   stroke-dashoffset: 0;
   transition: stroke-dashoffset 1100ms var(--ease-uit) 250ms;
 }
-.kantoor-foto .kf-notitie {
-  transition: opacity 500ms var(--ease-uit) 900ms, transform 500ms var(--ease-uit) 900ms;
-}
 .js .kantoor-foto[data-getekend="false"] .kf-lijn {
   stroke-dashoffset: 1;
-}
-.js .kantoor-foto[data-getekend="false"] .kf-notitie {
-  opacity: 0;
 }
 @keyframes kf-puls {
   0% {
@@ -240,14 +234,10 @@ p {
     animation: none;
     opacity: 0;
   }
-  .kantoor-foto .kf-lijn,
-  .kantoor-foto .kf-notitie {
+  .kantoor-foto .kf-lijn {
     transition: none !important;
   }
   .js .kantoor-foto[data-getekend="false"] .kf-lijn {
     stroke-dashoffset: 0;
-  }
-  .js .kantoor-foto[data-getekend="false"] .kf-notitie {
-    opacity: 1;
   }
 }

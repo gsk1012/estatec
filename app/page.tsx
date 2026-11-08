@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import LogoStrip from "./components/LogoStrip";
 import Aanbod from "./components/Aanbod";
 import Resultaten from "./components/Resultaten";
 import Ontwikkeling from "./components/Ontwikkeling";
@@ -23,6 +24,7 @@ export default function Home() {
       <main>
         <Hero />
         <Aanbod />
+        <LogoStrip />
         <Resultaten />
         <Ontwikkeling />
         <Werkwijze />

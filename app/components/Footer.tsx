@@ -83,13 +83,12 @@ export default function Footer() {
           {/* Onderste strook */}
           <div className="flex flex-wrap items-center justify-between gap-x-10 gap-y-4 border-t border-calque-50/15 pt-8 sm:col-span-2 lg:col-span-12">
             <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
-              <span className="plan-letter text-[10px] text-calque-50/55">Aangesloten bij</span>
-              <span className="text-[15px] font-medium tracking-wide">VBO Makelaars</span>
-              <a href="https://vastgoednederland.nl/" target="_blank" rel="noopener" className="opacity-80 transition-opacity hover:opacity-100">
-                <Image src="/images/partners/vastgoed-nederland-wit.png" alt="Vastgoed Nederland" width={1119} height={520} className="h-8 w-auto" />
+              <span className="text-sm text-calque-50/60">Aangesloten bij</span>
+              <a href="https://vastgoednederland.nl/" target="_blank" rel="noopener" className="opacity-75 transition-opacity hover:opacity-100">
+                <Image src="/images/partners/vastgoed-nederland-logo-wit.png" alt="Vastgoed Nederland" width={1131} height={532} className="h-9 w-auto" />
               </a>
-              <a href="https://cepi.eu/nl/mmcepi" target="_blank" rel="noopener" className="opacity-80 transition-opacity hover:opacity-100">
-                <Image src="/images/partners/mmcepi-wit.png" alt="MMCEPI" width={793} height={529} className="h-12 w-auto" />
+              <a href="https://cepi.eu/nl/mmcepi" target="_blank" rel="noopener" className="opacity-75 transition-opacity hover:opacity-100">
+                <Image src="/images/partners/mmcepi-logo-wit.png" alt="MMCEPI" width={600} height={300} className="h-10 w-auto" />
               </a>
             </div>
             <div className="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-calque-50/60">

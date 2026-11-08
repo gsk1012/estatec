@@ -36,8 +36,10 @@ export default function KantoorFoto() {
 
   // Deur (nr. 539) en de plek van de notitie
   const deur = { x: 760, y: 560 };
-  const knik = { x: 1030, y: 240 };
-  const eind = { x: 1110, y: 240 };
+  const knik = { x: 980, y: 240 };
+  // De lijn loopt door tot onder de notitie, die aan de rechterrand vastzit;
+  // zo sluit hij op elke breedte aan zonder dat de notitie buiten beeld valt.
+  const eind = { x: 1560, y: 240 };
 
   return (
     <figure ref={ref} data-getekend={getekend} className="kantoor-foto group">
@@ -77,11 +79,11 @@ export default function KantoorFoto() {
 
         {/* Notitie */}
         <span
-          className="kf-notitie absolute hidden -translate-y-1/2 whitespace-nowrap border border-calque-50/40 bg-inkt/85 px-3 py-2 text-calque-50 backdrop-blur-[2px] sm:block"
-          style={pct(eind.x + 8, eind.y)}
+          className="absolute -translate-y-1/2 whitespace-nowrap border border-calque-50/40 bg-inkt/85 px-2 py-1.5 text-calque-50 backdrop-blur-[2px] sm:px-3 sm:py-2"
+          style={{ right: "3%", top: `${(eind.y / H) * 100}%` }}
         >
-          <span className="plan-letter block text-[10px] text-blauw-300">Hier vindt u ons</span>
-          <span className="mt-0.5 block text-[13px] leading-snug">
+          <span className="plan-letter block text-[9px] text-blauw-300 sm:text-[10px]">Hier vindt u ons</span>
+          <span className="mt-0.5 block text-[12px] leading-snug sm:text-[13px]">
             Kom gerust langs
           </span>
         </span>
