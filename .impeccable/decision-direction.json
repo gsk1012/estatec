@@ -1,0 +1,129 @@
+{
+  "title": "Kies de visuele wereld voor ESTATEC",
+  "question": "De roll wees 'Amsterdams Raster' toe. Houden, een alternatief kiezen, of opnieuw rollen.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Amsterdams Raster",
+      "kicker": "THE ROLL",
+      "lineage": "Nederlandse modernistische huisstijlprogramma's (Total Design, Stedelijk-catalogi, jaren 60-70)",
+      "thesis": "ESTATEC als helder Nederlands identiteitsprogramma: één streng raster, feiten en cijfers als de typografie zelf.",
+      "palette": ["#141414", "#F2F1ED", "#1F3A33", "#BDAAA5", "#C8553D"],
+      "materials": ["offsetdruk op ongestreken papier", "strak 12-koloms raster", "zakelijke grotesk"],
+      "viewport": "De hero-video full-bleed achter een zichtbaar raster; links groot ESTATEC-statement, onderaan een vierkoloms routebalk Verkopen · Kopen · Huren · Beleggen, elk met eigen actie.",
+      "risk": "Kan streng of kil lezen als de foto's en het team niet groot genoeg mogen zijn.",
+      "raised": [
+        { "from": "pop-culture-shelf-primary-toy-catalogue-spread", "raise": "Aanbod staat kant-aan-kant in één dicht veld, prijs en kenmerken ruled onder elke woning, verkocht wordt doorgestreept." },
+        { "from": "signals-instruments-drum-machine-step-row", "raise": "De werkwijze is één ononderbroken rij van vijf stappen met een indicator die laat zien waar u nu staat." },
+        { "from": "medium-native-crt-arcade-pixel-glow", "raise": "De accentkleur is bij wet gereserveerd voor 'beschikbaar' en de primaire actie, nergens anders." },
+        { "from": "posters-covers-sleeves-movida-scene-magazine", "raise": "Teamportretten hard en groot gecropt, met volle overtuiging in plaats van kleine avatars." },
+        { "from": "craft-making-coptic-exposed-binding", "raise": "De rasterlijnen blijven zichtbaar: de structuur van de pagina is het enige ornament." }
+      ]
+    },
+    {
+      "id": "model-pick",
+      "label": "Maatvoering",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "NEN 2580-meetrapporten en architectenplattegronden",
+      "thesis": "Een makelaar die gebouwen leest als ontwikkelaar: maatlijnen, m² en plattegronden als ordenend systeem.",
+      "palette": ["#16191C", "#EEF0EE", "#2B4C6F", "#D9DDD8"],
+      "materials": ["calqueerpapier", "haarlijn-maatvoering", "technisch letterwerk"],
+      "viewport": "Video in een kader met maatlijnen eromheen; routes als kamers van een plattegrond, m² als hoofdgetal in het aanbod.",
+      "risk": "Ook de richting waar veel architectuur- en vastgoedsites op uitkomen; kan technisch en afstandelijk voelen voor huurders."
+    },
+    {
+      "id": "challenger-daylight",
+      "label": "Daglichtdoorsnede",
+      "verdict": "competitive",
+      "lineage": "architectonische doorsnedetekeningen met zonlicht",
+      "thesis": "Het kantoor als doorsnede door een Amsterdams pand: elke dienst een verdieping, het licht schuift mee met de scroll.",
+      "palette": ["#F4F1EA", "#2A2A2A", "#E3B04B", "#5E7A8C"],
+      "materials": ["kalkwit", "doorsnede-poché in antraciet", "zonnestraal als actieve band"],
+      "viewport": "Een gestileerde doorsnede van een grachtenpand naast de video, verdiepingen gelabeld met de vier routes.",
+      "case": "Spreekt beleggers en ontwikkeling sterk aan; verliest op helderheid voor kopers en huurders die snel aanbod willen zien.",
+      "risk": "Concept kan de video en het aanbod overschaduwen.",
+      "hero": "https://impeccable.style/worlds/cards/architecture-inhabitable-space-daylight-section-hero.webp"
+    },
+    {
+      "id": "challenger-toy",
+      "label": "Catalogusspread",
+      "verdict": "declined",
+      "lineage": "jaren-80 speelgoedcatalogi",
+      "palette": ["#D62828", "#F7C600", "#1D4ED8", "#FFFFFF"],
+      "materials": ["krantenpapier", "prijsflitsen"],
+      "thesis": "Aanbod als dicht gepakte catalogus.",
+      "viewport": "Woningen kant-aan-kant met prijsburst.",
+      "risk": "Schreeuwerig; botst met zakelijk.",
+      "case": "Verliest op beide assen voor een zakelijke makelaar.",
+      "kept": "De dichtheid: aanbod kant-aan-kant met kenmerken eronder.",
+      "hero": "https://impeccable.style/worlds/cards/pop-culture-shelf-primary-toy-catalogue-spread-hero.webp"
+    },
+    {
+      "id": "challenger-step",
+      "label": "Stappenrij",
+      "verdict": "declined",
+      "lineage": "jaren-80 drumcomputers",
+      "palette": ["#222222", "#E2412E", "#F29F05", "#F2E205"],
+      "materials": ["paneel", "LED"],
+      "thesis": "Het traject als stappenrij met looplicht.",
+      "viewport": "Zestien stappen, één looplicht.",
+      "risk": "Speels instrumentgevoel past niet bij de doelgroep.",
+      "case": "Verliest op beide assen.",
+      "kept": "Eén ononderbroken procesrij met een 'nu'-indicator.",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-drum-machine-step-row-hero.webp"
+    },
+    {
+      "id": "challenger-movida",
+      "label": "Scenemagazine",
+      "verdict": "declined",
+      "lineage": "Madrileense scenebladen",
+      "palette": ["#FF3EA5", "#B6FF3B", "#000000", "#FFFFFF"],
+      "materials": ["fluor-inkt", "misregistratie"],
+      "thesis": "Cover-chaos met flitsportret.",
+      "viewport": "Hard gecropt portret onder handgeschreven masthead.",
+      "risk": "Onzakelijk.",
+      "case": "Verliest op beide assen.",
+      "kept": "Portretten hard en groot gecropt.",
+      "hero": "https://impeccable.style/worlds/cards/posters-covers-sleeves-movida-scene-magazine-hero.webp"
+    },
+    {
+      "id": "challenger-coptic",
+      "label": "Open binding",
+      "verdict": "declined",
+      "lineage": "Koptische boekbinding",
+      "palette": ["#C9B79C", "#6B4F35", "#EDE6D8"],
+      "materials": ["linnen draad", "houten platten"],
+      "thesis": "Structuur zichtbaar als enige ornament.",
+      "viewport": "Een kettingsteek-rug als navigatie.",
+      "risk": "Ambachtelijk-warm, niet zakelijk.",
+      "case": "Verliest op beide assen.",
+      "kept": "Zichtbare structuur als enige ornament.",
+      "hero": "https://impeccable.style/worlds/cards/craft-making-coptic-exposed-binding-hero.webp"
+    },
+    {
+      "id": "challenger-arcade",
+      "label": "Arcadescherm",
+      "verdict": "declined",
+      "lineage": "pixel-art arcadekasten",
+      "palette": ["#000000", "#FFD700", "#00E5FF", "#FF2E63"],
+      "materials": ["scanlines", "fosfor-gloed"],
+      "thesis": "Pixelraster met gloed.",
+      "viewport": "Tegelraster met scorebalk.",
+      "risk": "Volledig off-brand.",
+      "case": "Verliest op beide assen.",
+      "kept": "Een kleur bij wet gereserveerd voor één toestand.",
+      "hero": "https://impeccable.style/worlds/cards/medium-native-crt-arcade-pixel-glow-hero.webp"
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "canon": true,
+  "canonCard": {
+    "label": "De categoriestandaard",
+    "thesis": "Wat makelaarssites altijd tonen, maar dan vakkundig uitgevoerd.",
+    "palette": ["#FFFFFF", "#0F1E33", "#B08D57"],
+    "materials": ["schoon raster", "woningfotografie"],
+    "viewport": "Full-bleed video met zoekbalk, drie dienstenkaarten, aanbodslider, reviewslider.",
+    "risk": "Niet te onderscheiden van andere makelaars, juist zo bedoeld."
+  },
+  "steer": true
+}

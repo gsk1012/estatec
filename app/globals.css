@@ -1,0 +1,253 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ease-uit: cubic-bezier(0.23, 1, 0.32, 1);
+  --header-h: 76px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 16px);
+  -webkit-text-size-adjust: 100%;
+  scrollbar-color: #9aa29a #edefec;
+}
+
+body {
+  background-color: #edefec;
+  color: #15181b;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "ss01" on;
+  caret-color: #24476b;
+}
+
+::selection {
+  background: #24476b;
+  color: #f7f8f6;
+}
+
+:focus-visible {
+  outline: 2px solid #24476b;
+  outline-offset: 3px;
+}
+
+.op-donker :focus-visible,
+.op-donker:focus-visible {
+  outline-color: #9db4cc;
+}
+
+a {
+  text-underline-offset: 0.22em;
+  text-decoration-thickness: 1px;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+@layer components {
+  /* Planletters: verbreed kapitaal zoals op een bouwtekening. Geen eyebrow;
+     alleen voor namen ín het systeem (ruimtes, kolomkoppen, maatvoering). */
+  .plan-letter {
+    font-stretch: 125%;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .display {
+    font-stretch: 112%;
+    font-weight: 500;
+    letter-spacing: -0.025em;
+    line-height: 1.02;
+  }
+
+  .maat {
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+
+  /* Knoppen: inkt-rechthoeken, geen pillen. Druk-feedback volgens Emil. */
+  .knop {
+    @apply inline-flex items-center justify-center gap-3 px-5 text-[15px] font-medium transition-[background-color,color,border-color,transform] duration-200 ease-uit;
+    min-height: 48px;
+    font-stretch: 105%;
+  }
+  .knop:active {
+    transform: scale(0.97);
+  }
+  .knop-blauw {
+    @apply bg-blauw text-calque-50 hover:bg-blauw-700;
+  }
+  .knop-inkt {
+    @apply bg-inkt text-calque-50 hover:bg-inkt-800;
+  }
+  .knop-lijn {
+    @apply border border-inkt text-inkt hover:bg-inkt hover:text-calque-50;
+  }
+  .knop-lijn-licht {
+    @apply border border-calque-50/70 text-calque-50 hover:bg-calque-50 hover:text-inkt;
+  }
+}
+
+/* ---------- Maatlijn (signatuur): tekent zich vanaf het midden uit -------- */
+.maatlijn-lijn {
+  transform-origin: center;
+  transform: scaleX(1);
+}
+.maatlijn-tick {
+  transform: scaleY(1);
+}
+.js .maatlijn[data-zichtbaar="false"] .maatlijn-lijn {
+  transform: scaleX(0);
+}
+.js .maatlijn[data-zichtbaar="false"] .maatlijn-tick {
+  transform: scaleY(0);
+}
+.js .maatlijn[data-zichtbaar="false"] .maatlijn-label {
+  opacity: 0;
+}
+.maatlijn-lijn {
+  transition: transform 900ms var(--ease-uit);
+}
+.maatlijn-tick {
+  transition: transform 300ms var(--ease-uit) 600ms;
+}
+.maatlijn-label {
+  transition: opacity 400ms var(--ease-uit) 450ms;
+}
+
+/* ---------- Hero: het ene georkestreerde moment ---------------------------- */
+@keyframes regel-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+.regel-in {
+  animation: regel-in 800ms var(--ease-uit) both;
+}
+
+/* Deur draait open bij hover/focus van een ruimte in de plattegrond. */
+.deur-blad {
+  transform-box: view-box;
+  transform-origin: var(--scharnier-x) var(--scharnier-y);
+  transform: rotate(var(--kier, 0deg));
+  transition: transform 320ms var(--ease-uit);
+}
+.ruimte:hover .deur-blad,
+.ruimte:focus-visible .deur-blad {
+  transform: rotate(var(--draai, -60deg));
+}
+.ruimte .ruimte-arcering {
+  opacity: 0;
+  transition: opacity 260ms ease;
+}
+.ruimte:hover .ruimte-arcering,
+.ruimte:focus-visible .ruimte-arcering {
+  opacity: 1;
+}
+
+/* Arcering zoals doorsneden op tekening: 45° haarlijnen. */
+.arcering {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(36, 71, 107, 0.11) 0 1px,
+    transparent 1px 9px
+  );
+}
+
+/* Verkocht: doorgehaald zoals in een meetstaat. */
+.doorgehaald {
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+  text-decoration-color: rgba(21, 24, 27, 0.55);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .regel-in {
+    animation: none;
+  }
+  .maatlijn-lijn,
+  .maatlijn-tick,
+  .maatlijn-label,
+  .deur-blad {
+    transition: none !important;
+  }
+  .js .maatlijn[data-zichtbaar="false"] .maatlijn-lijn {
+    transform: scaleX(1);
+  }
+  .js .maatlijn[data-zichtbaar="false"] .maatlijn-tick {
+    transform: scaleY(1);
+  }
+  .js .maatlijn[data-zichtbaar="false"] .maatlijn-label {
+    opacity: 1;
+  }
+}
+
+@media (hover: none) {
+  .ruimte:hover .deur-blad {
+    transform: rotate(var(--kier, 0deg));
+  }
+}
+
+/* ---------- Kantoorfoto: annotaties tekenen zich uit bij in beeld -------- */
+.kantoor-foto .kf-lijn {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1100ms var(--ease-uit) 250ms;
+}
+.kantoor-foto .kf-notitie {
+  transition: opacity 500ms var(--ease-uit) 900ms, transform 500ms var(--ease-uit) 900ms;
+}
+.js .kantoor-foto[data-getekend="false"] .kf-lijn {
+  stroke-dashoffset: 1;
+}
+.js .kantoor-foto[data-getekend="false"] .kf-notitie {
+  opacity: 0;
+}
+@keyframes kf-puls {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(3.2);
+    opacity: 0;
+  }
+}
+.kantoor-foto .kf-puls {
+  animation: kf-puls 2.4s var(--ease-uit) infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .kantoor-foto .kf-puls {
+    animation: none;
+    opacity: 0;
+  }
+  .kantoor-foto .kf-lijn,
+  .kantoor-foto .kf-notitie {
+    transition: none !important;
+  }
+  .js .kantoor-foto[data-getekend="false"] .kf-lijn {
+    stroke-dashoffset: 0;
+  }
+  .js .kantoor-foto[data-getekend="false"] .kf-notitie {
+    opacity: 1;
+  }
+}

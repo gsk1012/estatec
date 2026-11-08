@@ -1,0 +1,302 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-08T22:00:16.979836+00:00",
+  "title": "Design System: ESTATEC Makelaars",
+  "extensions": {
+    "colorMeta": {
+      "inkt": {
+        "role": "neutral",
+        "displayName": "Inkt",
+        "canonical": "#15181B",
+        "tonalRamp": [
+          "#15181B",
+          "#22272C",
+          "#3E454C",
+          "#59616A",
+          "#7A828A",
+          "#9AA29A",
+          "#C3C9C3",
+          "#E2E5E1"
+        ]
+      },
+      "inkt-800": {
+        "role": "neutral",
+        "displayName": "Inkt 800",
+        "canonical": "#22272C"
+      },
+      "inkt-600": {
+        "role": "neutral",
+        "displayName": "Inkt 600",
+        "canonical": "#3E454C"
+      },
+      "inkt-500": {
+        "role": "neutral",
+        "displayName": "Inkt 500",
+        "canonical": "#59616A"
+      },
+      "calque": {
+        "role": "neutral",
+        "displayName": "Calque",
+        "canonical": "#EDEFEC",
+        "tonalRamp": [
+          "#2A2E2B",
+          "#4A504B",
+          "#6E756F",
+          "#9AA29A",
+          "#C3C9C3",
+          "#E2E5E1",
+          "#EDEFEC",
+          "#F7F8F6"
+        ]
+      },
+      "calque-50": {
+        "role": "neutral",
+        "displayName": "Calque 50 (sheet)",
+        "canonical": "#F7F8F6"
+      },
+      "calque-200": {
+        "role": "neutral",
+        "displayName": "Calque 200 (quiet sheet)",
+        "canonical": "#E2E5E1"
+      },
+      "lijn": {
+        "role": "neutral",
+        "displayName": "Lijn (hairline)",
+        "canonical": "#C3C9C3"
+      },
+      "blauw": {
+        "role": "primary",
+        "displayName": "Blauwdrukblauw",
+        "canonical": "#24476B",
+        "tonalRamp": [
+          "#0F1F30",
+          "#1B3753",
+          "#24476B",
+          "#3B6189",
+          "#6487AC",
+          "#9DB4CC",
+          "#C4D3E2",
+          "#DCE5EE"
+        ]
+      },
+      "blauw-700": {
+        "role": "primary",
+        "displayName": "Diep Blauwdruk",
+        "canonical": "#1B3753"
+      },
+      "blauw-300": {
+        "role": "primary",
+        "displayName": "Lichtdruk Blauw (focus on dark)",
+        "canonical": "#9DB4CC"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero H1 only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section H2s and mobile menu items."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Street names, step titles, people names."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Section intros, capped at 32 to 38rem."
+      },
+      "body-sm": {
+        "displayName": "Body Sm",
+        "purpose": "Descriptions, schedules, nav, buttons."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Plan-letters: names inside the drawing; never a kicker. 11px floor."
+      },
+      "figure": {
+        "displayName": "Figure",
+        "purpose": "Prices and counts; tabular lining figures."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-uit",
+        "value": "cubic-bezier(0.23, 1, 0.32, 1)",
+        "purpose": "Default ease-out for every transition and entrance."
+      },
+      {
+        "name": "maatlijn-draw",
+        "value": "900ms line / 300ms ticks at 600ms / 400ms label at 450ms",
+        "purpose": "Dimension line draws out from centre once on entering view."
+      },
+      {
+        "name": "deur-swing",
+        "value": "320ms ease-uit, ajar 28deg to 90deg",
+        "purpose": "Floor-plan door opens on room hover or focus."
+      },
+      {
+        "name": "regel-in",
+        "value": "800ms ease-uit, 14px rise with 4px blur",
+        "purpose": "Hero line entrance and tab panel swap (420ms)."
+      },
+      {
+        "name": "knop-press",
+        "value": "200ms ease-uit, active scale 0.97",
+        "purpose": "Button press feedback."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      },
+      {
+        "name": "xl",
+        "value": "1280px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one conversion action per context: waardebepaling, form submit.",
+      "html": "<button class=\"ds-knop-blauw\">Gratis waardebepaling</button>",
+      "css": ".ds-knop-blauw{font-family:var(--font-archivo),system-ui,sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:48px;padding:0 20px;font-size:15px;font-weight:500;font-stretch:105%;border:0;border-radius:0;cursor:pointer;transition:background-color .2s cubic-bezier(0.23,1,0.32,1),color .2s cubic-bezier(0.23,1,0.32,1),transform .2s cubic-bezier(0.23,1,0.32,1);background:#24476B;color:#F7F8F6;} .ds-knop-blauw:hover{background:#1B3753;} .ds-knop-blauw:focus-visible{outline:2px solid #24476B;outline-offset:3px;} .ds-knop-blauw:active{transform:scale(0.97);}"
+    },
+    {
+      "name": "Ink Button",
+      "kind": "button",
+      "refersTo": "button-ink",
+      "description": "Secondary action inside a section.",
+      "html": "<button class=\"ds-knop-inkt\">Plan een kennismaking</button>",
+      "css": ".ds-knop-inkt{font-family:var(--font-archivo),system-ui,sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:48px;padding:0 20px;font-size:15px;font-weight:500;font-stretch:105%;border:0;border-radius:0;cursor:pointer;transition:background-color .2s cubic-bezier(0.23,1,0.32,1),color .2s cubic-bezier(0.23,1,0.32,1),transform .2s cubic-bezier(0.23,1,0.32,1);background:#15181B;color:#F7F8F6;} .ds-knop-inkt:hover{background:#22272C;} .ds-knop-inkt:focus-visible{outline:2px solid #24476B;outline-offset:3px;} .ds-knop-inkt:active{transform:scale(0.97);}"
+    },
+    {
+      "name": "Line Button",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "Tertiary action on calque; fills ink on hover.",
+      "html": "<button class=\"ds-knop-lijn\">Volledig aanbod bekijken</button>",
+      "css": ".ds-knop-lijn{font-family:var(--font-archivo),system-ui,sans-serif;display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:48px;padding:0 20px;font-size:15px;font-weight:500;font-stretch:105%;border:0;border-radius:0;cursor:pointer;transition:background-color .2s cubic-bezier(0.23,1,0.32,1),color .2s cubic-bezier(0.23,1,0.32,1),transform .2s cubic-bezier(0.23,1,0.32,1);background:transparent;color:#15181B;border:1px solid #15181B;} .ds-knop-lijn:hover{background:#15181B;color:#F7F8F6;} .ds-knop-lijn:focus-visible{outline:2px solid #24476B;outline-offset:3px;} .ds-knop-lijn:active{transform:scale(0.97);}"
+    },
+    {
+      "name": "Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Square 48px field with plan-letter label; blue on focus.",
+      "html": "<label class=\"ds-veld\"><span class=\"ds-veld-label\">Naam</span><input class=\"ds-veld-input\" placeholder=\"Uw naam\"></label>",
+      "css": ".ds-veld{display:block;max-width:320px;font-family:var(--font-archivo),system-ui,sans-serif;} .ds-veld-label{display:block;margin-bottom:8px;font-size:11px;font-weight:600;font-stretch:125%;text-transform:uppercase;letter-spacing:0.08em;color:#3E454C;} .ds-veld-input{width:100%;height:48px;padding:0 14px;border:1px solid rgba(21,24,27,0.6);border-radius:0;background:#F7F8F6;color:#15181B;font:inherit;font-size:16px;transition:border-color .2s;} .ds-veld-input::placeholder{color:#59616A;} .ds-veld-input:hover{border-color:#15181B;} .ds-veld-input:focus{border-color:#24476B;outline:none;} .ds-veld-input:focus-visible{outline:2px solid #24476B;outline-offset:2px;}"
+    },
+    {
+      "name": "Topic Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Contact-topic radio chip; active fills blue.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip ds-chip-actief\">Waardebepaling</button><button class=\"ds-chip\">Aankoop</button><button class=\"ds-chip\">Beleggen</button></div>",
+      "css": ".ds-chips{display:flex;flex-wrap:wrap;gap:8px;font-family:var(--font-archivo),system-ui,sans-serif;} .ds-chip{min-height:44px;padding:0 16px;border:1px solid rgba(21,24,27,0.5);border-radius:0;background:transparent;color:#15181B;font:inherit;font-size:15px;cursor:pointer;transition:border-color .2s,background-color .2s;} .ds-chip:hover{border-color:#15181B;} .ds-chip:focus-visible{outline:2px solid #24476B;outline-offset:2px;} .ds-chip-actief,.ds-chip-actief:hover{background:#24476B;border-color:#24476B;color:#F7F8F6;}"
+    },
+    {
+      "name": "Header Nav",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Fixed 76px header past the film: calque at 95% with blur and hairline.",
+      "html": "<nav class=\"ds-nav\"><strong class=\"ds-nav-merk\">ESTATEC</strong><a href=\"#\">Aanbod</a><a href=\"#\">Diensten</a><a href=\"#\">Ontwikkeling</a><a href=\"#\">Contact</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:28px;height:76px;padding:0 40px;background:rgba(237,239,236,0.95);backdrop-filter:blur(6px);border-bottom:1px solid #C3C9C3;color:#15181B;font-family:var(--font-archivo),system-ui,sans-serif;font-size:15px;} .ds-nav-merk{font-stretch:125%;letter-spacing:0.08em;margin-right:16px;} .ds-nav a{color:inherit;text-decoration:none;padding:8px 0;text-underline-offset:10px;text-decoration-thickness:1px;} .ds-nav a:hover{text-decoration:underline;} .ds-nav a:focus-visible{outline:2px solid #24476B;outline-offset:3px;}"
+    },
+    {
+      "name": "Maatlijn",
+      "kind": "custom",
+      "refersTo": "maatlijn",
+      "description": "Dimension line with end ticks and a centred real quantity.",
+      "html": "<div class=\"ds-maatlijn\"><span class=\"ds-tick\"></span><span class=\"ds-lijn\"></span><span class=\"ds-maat\">12 woningen</span><span class=\"ds-lijn\"></span><span class=\"ds-tick\"></span></div>",
+      "css": ".ds-maatlijn{display:flex;align-items:center;color:#3E454C;max-width:560px;font-family:var(--font-archivo),system-ui,sans-serif;} .ds-tick{display:block;width:1px;height:12px;background:currentColor;flex-shrink:0;} .ds-lijn{display:block;height:1px;flex:1;background:currentColor;transform-origin:center;animation:ds-teken 900ms cubic-bezier(0.23,1,0.32,1) both;} .ds-maat{padding:0 12px;font-size:12px;line-height:1;font-weight:600;font-stretch:125%;text-transform:uppercase;letter-spacing:0.08em;font-variant-numeric:tabular-nums lining-nums;} @keyframes ds-teken{from{transform:scaleX(0)}to{transform:scaleX(1)}} @media (prefers-reduced-motion:reduce){.ds-lijn{animation:none}}"
+    },
+    {
+      "name": "Plattegrond Room",
+      "kind": "custom",
+      "refersTo": "plattegrond",
+      "description": "A route as a room in the floor plan: 3px wall, plan-letter name, blue action, hatching on hover.",
+      "html": "<a class=\"ds-ruimte\" href=\"#\"><span class=\"ds-ruimte-naam\">Verkopen</span><span class=\"ds-ruimte-regel\">Weten wat uw woning waard is.</span><span class=\"ds-ruimte-actie\">Gratis waardebepaling &rarr;</span></a>",
+      "css": ".ds-ruimte{position:relative;display:flex;flex-direction:column;width:280px;min-height:200px;padding:24px;border:3px solid #15181B;background:#F7F8F6;color:#15181B;text-decoration:none;font-family:var(--font-archivo),system-ui,sans-serif;transition:background-image .26s;} .ds-ruimte:hover,.ds-ruimte:focus-visible{background-image:repeating-linear-gradient(-45deg,rgba(36,71,107,0.11) 0 1px,transparent 1px 9px);} .ds-ruimte:focus-visible{outline:2px solid #24476B;outline-offset:-6px;} .ds-ruimte-naam{font-size:13px;font-weight:600;font-stretch:125%;text-transform:uppercase;letter-spacing:0.08em;} .ds-ruimte-regel{margin-top:12px;font-size:15px;line-height:1.625;color:#3E454C;} .ds-ruimte-actie{margin-top:auto;padding-top:20px;font-size:15px;font-weight:500;color:#24476B;text-decoration:underline;text-decoration-color:rgba(36,71,107,0.4);text-underline-offset:6px;} .ds-ruimte:hover .ds-ruimte-actie{text-decoration-color:#24476B;}"
+    },
+    {
+      "name": "Schedule",
+      "kind": "card",
+      "refersTo": "schedule",
+      "description": "Default container: 3px ink top rule, hairline rows, tabular figures.",
+      "html": "<dl class=\"ds-staat\"><div><dt>Verkocht</dt><dd>148</dd></div><div><dt>Verhuurd</dt><dd>312</dd></div><div><dt>Gemiddelde looptijd</dt><dd>24 dagen</dd></div></dl>",
+      "css": ".ds-staat{margin:0;max-width:420px;border-top:3px solid #15181B;font-variant-numeric:tabular-nums lining-nums;font-family:var(--font-archivo),system-ui,sans-serif;font-size:15px;} .ds-staat div{display:grid;grid-template-columns:1fr auto;gap:24px;padding:14px 0;border-bottom:1px solid #C3C9C3;} .ds-staat dt{color:#3E454C;} .ds-staat dd{margin:0;font-weight:500;color:#15181B;}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Het Tekenblad",
+    "overview": "Every surface is a drawing sheet: ink on tracing paper, hairlines for measurement, heavy 3px walls for the things that enclose, and dimension lines with end ticks that carry a real quantity. The system borrows its grammar from NEN 2580 measurement reports and architects' floor plans, so a property agency reads as someone who measures buildings rather than someone who markets them.\n\nDensity is moderate and tabular. Content sits in ruled schedules (a 3px ink top rule, hairline row dividers), not in floating cards. Colour is almost absent: ink and calque carry the page, and blueprint blue appears only where something is available, actionable, or a measured quantity. Imagery (the hero film, listing photos, project photos) is full-bleed inside square frames, never rounded or shadowed.\n\nMotion is drafting motion: dimension lines draw outward from their centre once when they enter view, the hero's corner marks slide into place, and a floor-plan door swings open on hover or focus. Everything respects reduced motion by rendering the finished drawing.",
+    "keyCharacteristics": [
+      "Ink (#15181B) on calque (#EDEFEC); one functional blue.",
+      "Square corners everywhere; 0px radius is the only radius.",
+      "Three line weights: 1px hairline, 1.5px inner wall, 3px outer wall.",
+      "Dimension lines (maatlijnen) with end ticks and a centred, real quantity.",
+      "One variable family, Archivo, used across its width axis (100 to 125).",
+      "45° hatching as the only fill texture."
+    ],
+    "rules": [
+      {
+        "name": "The One Job Rule",
+        "body": "Blue appears only on what is available, actionable, or measured. If an element is none of those, it is ink.",
+        "section": "colors"
+      },
+      {
+        "name": "The Paper On Paper Rule",
+        "body": "Depth between surfaces comes from calque-50 sheets lying on calque or calque-200, bounded by ink lines, never from a tint of blue or a shadow.",
+        "section": "colors"
+      },
+      {
+        "name": "The Lettering Rule",
+        "body": "Plan-letters name things inside the drawing (a room, a column, a field, a quantity). They never sit above a heading as a kicker or eyebrow.",
+        "section": "typography"
+      },
+      {
+        "name": "The Width Axis Rule",
+        "body": "Hierarchy is set with width and size, not with extra families or heavy weights; nothing goes above 600.",
+        "section": "typography"
+      },
+      {
+        "name": "The Drawn Depth Rule",
+        "body": "If something needs to stand forward, give it a sheet and a wall, not a shadow.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** keep every corner square (0px) and build hierarchy from the three line weights: 1px hairline, 1.5px partition, 3px wall.",
+      "**Do** frame schedules, forms and plans with a 3px ink rule and divide rows with 1px lijn hairlines.",
+      "**Do** label every dimension line with a real quantity or count, and close it with end ticks.",
+      "**Do** reserve blauw for availability, action and measured quantities; keep everything else ink.",
+      "**Do** set prices, counts and areas in tabular lining figures.",
+      "**Do** use plan-letters (600, uppercase, 0.08em, width 125%, at least 11px) only for names inside the drawing.",
+      "**Do** render the finished drawing under reduced motion: lines drawn, doors ajar, no entrance animation.",
+      "**Do** give text over imagery an ink scrim rather than a coloured overlay."
+    ],
+    "donts": [
+      "**Don't** round corners or use pill buttons.",
+      "**Don't** add shadows to cards, sheets or buttons; depth is a sheet and a wall.",
+      "**Don't** put a plan-letter above a heading as a kicker or eyebrow.",
+      "**Don't** use a dimension line as a decorative divider without a quantity.",
+      "**Don't** introduce a second accent colour or use blue for decoration, categories or emphasis.",
+      "**Don't** build service-card grids or review sliders; services are rooms in the plan and reviews are a static schedule.",
+      "**Don't** add a second type family; vary Archivo's width instead."
+    ]
+  }
+}

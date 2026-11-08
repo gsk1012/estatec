@@ -1,0 +1,26 @@
+# dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# build
+dist/
+
+# env files
+.env
+.env.local
+.env.*.local
+
+# misc
+.DS_Store
+.playwright-cli/
+*.pem
+npm-debug.log*
+tsconfig.tsbuildinfo
+.vercel
+raw/
+.impeccable/review/
+.next-build/
+.impeccable/questions/
