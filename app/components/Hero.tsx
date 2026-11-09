@@ -9,7 +9,7 @@ export default function Hero() {
     <section id="top" aria-labelledby="hero-titel" className="relative bg-calque">
       <div
         id="hero-film"
-        className="op-donker relative isolate flex min-h-[60svh] flex-col overflow-hidden bg-inkt text-calque-50 lg:min-h-[max(100svh,760px)]"
+        className="op-donker relative isolate flex min-h-[86svh] flex-col overflow-hidden sm:min-h-[72svh] bg-inkt text-calque-50 lg:min-h-[max(calc(100svh-16px),700px)]"
       >
         <Image
           src="/video/hero-poster.jpg"
@@ -29,7 +29,7 @@ export default function Hero() {
           }}
         />
 
-        <div className="mx-auto mt-auto w-full max-w-blad px-4 pb-12 pt-[calc(var(--header-h)+72px)] sm:px-6 sm:pt-[calc(var(--header-h)+96px)] lg:px-10 lg:pb-[300px]">
+        <div className="mx-auto mt-auto w-full max-w-blad px-4 pb-12 pt-[calc(var(--header-h)+72px)] sm:px-6 sm:pt-[calc(var(--header-h)+96px)] lg:px-10 lg:pb-[150px]">
           <div className="max-w-[44rem]">
             <h1
               id="hero-titel"
@@ -57,9 +57,9 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Desktop: de plattegrond ligt als tekenblad onderaan op de film.
-          Mobiel/tablet: direct eronder, half over de film. */}
-      <div className="relative z-10 mx-auto -mt-6 max-w-blad px-4 sm:px-6 lg:absolute lg:inset-x-0 lg:bottom-10 lg:mt-0 lg:px-10">
+      {/* De plattegrond ligt op de onderrand van de film: op desktop half over de
+          film en half eronder; mobiel/tablet steekt hij er een klein stukje in. */}
+      <div className="relative z-10 mx-auto -mt-6 max-w-blad px-4 sm:px-6 lg:-mt-[113px] lg:px-10">
         <Plattegrond />
       </div>
     </section>
